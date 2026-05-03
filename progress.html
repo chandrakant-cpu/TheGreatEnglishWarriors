@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Progress - TheGreatEnglishWarriors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .progress-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .progress-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .progress-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .stat-card {
+      padding: 2rem;
+      background: #fff;
+      border-radius: 1rem;
+      border: 1px solid #e5e9f1;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--teal);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 12px;
+      background: #e5e9f1;
+      border-radius: 6px;
+      overflow: hidden;
+      margin: 1rem 0;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--teal), var(--gold));
+      border-radius: 6px;
+      transition: width 0.3s ease;
+    }
+
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .achievement-card {
+      padding: 1.5rem;
+      background: #fff;
+      border-radius: 1rem;
+      border: 1px solid #e5e9f1;
+      text-align: center;
+      opacity: 0.6;
+      transition: all 0.3s ease;
+    }
+
+    .achievement-card.unlocked {
+      opacity: 1;
+      border-color: var(--teal);
+      box-shadow: 0 4px 12px rgba(45, 180, 200, 0.15);
+    }
+
+    .achievement-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .achievement-card.unlocked .achievement-icon {
+      color: var(--teal);
+    }
+
+    .upcoming-sessions {
+      margin-top: 3rem;
+    }
+
+    .session-list {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .session-item {
+      padding: 1.5rem;
+      background: #fff;
+      border-radius: 1rem;
+      border: 1px solid #e5e9f1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .session-info h4 {
+      margin: 0 0 0.25rem;
+    }
+
+    .session-info p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .session-time {
+      background: var(--teal);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">TGW</span>
+        <span>TheGreatEnglishWarriors</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html#courses">Programs</a>
+        <a href="#progress">My Progress</a>
+        <a href="index.html#join" class="btn btn-secondary">Upgrade</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container progress-container">
+        <div class="progress-header">
+          <h1>My Warrior Progress</h1>
+          <p>Track your journey to English mastery</p>
+        </div>
+
+        <div class="progress-stats">
+          <div class="stat-card">
+            <div class="stat-number">68%</div>
+            <div class="stat-label">Course Complete</div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 68%"></div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">24</div>
+            <div class="stat-label">Live Sessions Attended</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">156</div>
+            <div class="stat-label">Practice Exercises</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">12</div>
+            <div class="stat-label">Achievements Unlocked</div>
+          </div>
+        </div>
+
+        <div class="achievements-section">
+          <h2>Achievement Badges</h2>
+          <div class="achievements-grid">
+            <div class="achievement-card unlocked">
+              <div class="achievement-icon">🎯</div>
+              <h4>First Mission</h4>
+              <p>Completed your first lesson</p>
+            </div>
+            <div class="achievement-card unlocked">
+              <div class="achievement-icon">🗣️</div>
+              <h4>Speaking Warrior</h4>
+              <p>Participated in 10 live sessions</p>
+            </div>
+            <div class="achievement-card unlocked">
+              <div class="achievement-icon">📚</div>
+              <h4>Grammar Guardian</h4>
+              <p>Mastered all basic tenses</p>
+            </div>
+            <div class="achievement-card unlocked">
+              <div class="achievement-icon">🎤</div>
+              <h4>Confident Communicator</h4>
+              <p>Delivered first presentation</p>
+            </div>
+            <div class="achievement-card">
+              <div class="achievement-icon">🏆</div>
+              <h4>Course Champion</h4>
+              <p>Complete the full program</p>
+            </div>
+            <div class="achievement-card">
+              <div class="achievement-icon">🌟</div>
+              <h4>Fluency Master</h4>
+              <p>Achieve 90% fluency score</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="upcoming-sessions">
+          <h2>Upcoming Live Sessions</h2>
+          <div class="session-list">
+            <div class="session-item">
+              <div class="session-info">
+                <h4>Advanced Presentation Skills</h4>
+                <p>Master executive-level presentations and boardroom communication</p>
+              </div>
+              <div class="session-time">Tomorrow 3:00 PM</div>
+            </div>
+            <div class="session-item">
+              <div class="session-info">
+                <h4>Business Negotiation Workshop</h4>
+                <p>Learn to negotiate deals and contracts in professional English</p>
+              </div>
+              <div class="session-time">Friday 2:00 PM</div>
+            </div>
+            <div class="session-item">
+              <div class="session-info">
+                <h4>Academic Writing Masterclass</h4>
+                <p>Write research papers and theses with academic precision</p>
+              </div>
+              <div class="session-time">Next Monday 4:00 PM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>TheGreatEnglishWarriors</strong>
+        <p>Empowering you to communicate with courage, clarity, and command.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#courses">Programs</a>
+        <a href="index.html#join">Join</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
